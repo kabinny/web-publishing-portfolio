@@ -1,0 +1,560 @@
+/*index*/
+
+/*section main*/
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.main:before {
+    /*ios 에서 배경이미지 fixed한 것이 적용이 안되어서 이렇게 쓰지만 페이지당 하나밖에 안되는거 같아서 나머지 이미지들은 미디어쿼리에서 background-attachment: initial;로 쎠야함. 하지만 해상도가 큰 아이패드에서 문제가 될 수 있음.*/
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(../img/index_main.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.main:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(88,25,16,1) 10%, rgba(88,25,16,0));
+}
+.main .mainTitle {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    width: 80%;
+}
+.main .mainTitle h2 {
+    font-size: 4em;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.main .mainTitle h2:after {
+    background-image: none;
+}
+/*typing effect*/
+/*같은 간격으로 움직이는 것*/
+/*
+.main .mainTitle .typing {
+    display: inline-block;
+    overflow: hidden;
+    animation: typing 2s steps(16, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+}
+@keyframes typing {
+    from {width: 0%}
+    to {width: 100%}
+}
+@keyframes blink {
+    from, to {border-color: transparent}
+    50% {border-color: #fff}
+}
+*/
+/*//typing effect*/
+
+.main .mainTitle p {
+    font-size: 1.2em;
+    margin-bottom: 120px;
+    position: relative;
+}
+.main .mainTitle p:after {
+    content: '';
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/line_white.png);
+    background-repeat: no-repeat;
+    background-size: 300px 60px;
+    width: 300px;
+    height: 60px;
+}
+.main .mainTitle p.img img {
+    width: 100%;
+    height: 100%;
+}
+.main .mainTitle a {
+    color: #fff;
+    background: #83c7d9;
+    animation-name: showup;
+    animation-duration: 1.2s;
+}
+@keyframes showup {
+    0% {opacity: 0;transform: translateY(170%);}
+    30% {opacity: 0;transform: translateY(170%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.main .mainTitle a:nth-child(4) {
+    margin-left: 20px;
+    background: #acd295;
+}
+.main .mainTitle a:hover,
+.main .mainTitle a:focus {
+    background: rgba(255,255,255,0);
+}
+
+/*section works*/
+.works {
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+    background: url(../img/index_works_bg.jpg) no-repeat center / cover;
+}
+.works ul {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.works ul li {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    text-align: center;
+    color: rgb(88,25,16);
+    opacity: 0;
+}
+/*스크롤탑으로 섹션 중간이상 스트롤되면 클래스 추가됨*/
+.works ul li.active {
+    animation-name: showup;
+    animation-duration: 1s;
+}
+@keyframes showup {
+    0% {opacity: 0;transform: translateY(30%);}
+    30% {opacity: 0;transform: translateY(30%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.works ul li:nth-child(2) {
+    animation-duration: 1.3s;
+}
+.works ul li:last-child {
+    margin-right: 0;
+    animation-duration: 1.5s;
+}
+.works ul li p.img {
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+}
+.works ul li p.img img {
+    width: 100%;
+    height: 100%;
+}
+.works ul li h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/*section each*/
+.each {
+    width: 100%;
+    padding: 80px 0;
+    background: url(../img/index_each.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+}
+.each ul {
+    width: 100%;
+    overflow: hidden;
+}
+.each ul li {
+    float: left;
+    width: 45%;
+    margin-right: 10%;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(131,199,217,0.7);
+    text-align: center;
+    opacity: 0;
+}
+.each ul li.active {
+    animation-name: eachUp;
+    animation-duration: 0.8s;
+}
+@keyframes eachUp {
+    0% {opacity: 0;transform: translateY(30%);}
+    30% {opacity: 0;transform: translateY(30%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.each ul li:last-child {
+    margin-right: 0;
+    animation-duration: 1s;
+}
+.each ul li h3 {
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 90px;
+    position: relative;
+}
+.each ul li h3:after {
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/line_white.png);
+    background-repeat: no-repeat;
+    background-size: 200px 50px;
+    width: 200px;
+    height: 50px;
+}
+.each ul li p {
+    color: #fff;
+    line-height: 1.7;
+}
+
+/*section teas*/
+.teas {
+    width: 100%;
+    background: #eaeaea;
+    padding: 60px 0;
+}
+.teas>ul {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.teas>ul li {
+    float: left;
+    width: 8%;
+    margin: 0 1%;
+    opacity: 0;
+}
+.teas ul li.active {
+    animation-name: teasUp;
+    animation-duration: 0.8s;
+}
+@keyframes teasUp {
+    0% {opacity: 0;transform: translateY(30%);}
+    30% {opacity: 0;transform: translateY(30%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.teas ul li:nth-child(2) {animation-duration: 0.9s;}
+.teas ul li:nth-child(3) {animation-duration: 1s;}
+.teas ul li:nth-child(4) {animation-duration: 1.1s;}
+.teas ul li:nth-child(5) {animation-duration: 1.2s;}
+.teas ul li:nth-child(6) {animation-duration: 1.3s;}
+.teas ul li:nth-child(7) {animation-duration: 1.4s;}
+.teas ul li:nth-child(8) {animation-duration: 1.5s;}
+.teas ul li:nth-child(9) {animation-duration: 1.6s;}
+.teas ul li:nth-child(10) {animation-duration: 1.7s;}
+
+.teas>ul li:hover p.img img {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+.teas>ul li p.img img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s;
+}
+.teas .inner {
+    text-align: center;
+}
+.teas .inner ul {
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+.teas .inner ul li {
+    float: left;
+    width: 25%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(88,25,16);
+    opacity: 0;
+}
+.teas .inner ul li h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.teas .inner ul li p {
+    line-height: 1.7;
+}
+.teas .inner a {
+    text-align: center;
+    background: #fec1d6;
+    transition: all 0.5s;
+}
+.teas .inner a:hover,
+.teas .inner a:focus {
+    color: rgb(131,199,217);
+    background: rgba(131,199,217,0);
+    transition: all 0.5s;
+}
+.teas .inner a.hover_effect:before,
+.teas .inner a.hover_effect:after,
+.teas .inner a.hover_effect>span:before,
+.teas .inner a.hover_effect>span:after{
+    background: rgb(131,199,217);
+}
+
+/*section price*/
+.price {
+    width: 100%;
+    padding: 80px 0;
+    background: url(../img/index_price.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+}
+.price h2 {
+    color: #fff;
+}
+.price h2:after {
+    background-image: url(../img/line_white.png);
+}
+.price ul {
+    width: 100%;
+    overflow: hidden;
+}
+.price ul li {
+    float: left;
+    width: 45%;
+    margin-right: 10%;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.8);
+    text-align: center;
+    opacity: 0;
+}
+.price ul li.active {
+    animation-name: priceUp;
+    animation-duration: 0.8s;
+}
+@keyframes priceUp {
+    0% {opacity: 0;transform: translateY(30%);}
+    30% {opacity: 0;transform: translateY(30%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.price ul li:last-child {
+    margin-right: 0;
+    animation-duration: 1s;
+}
+.price ul li h3 {
+    font-size: 32px;
+    color: rgb(88,25,16);
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.price ul li span {
+    font-size: 38px;
+    font-weight: bold;
+    color: #83c7d9;
+}
+.price ul li:nth-child(2) span {
+    color: #acd295;
+}
+.price ul li p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    color: rgb(88,25,16);
+}
+.price ul li a {
+    background: #83c7d9;
+    display: inline-block;
+    padding: 9px 70px;
+    border-radius: 50px;
+    color: #fff;
+    transition: all 0.4s;
+}
+.price ul li:nth-child(2) a {
+    background: #acd295;
+}
+.price ul li a:hover,
+.price ul li a:focus {
+    background: #fff;
+    color: #acd295;
+    border: 1px solid #acd295;
+}
+.price ul li:nth-child(2) a:hover,
+.price ul li:nth-child(2) a:focus {
+    background: #fff;
+    color: #83c7d9;
+    border: 1px solid #83c7d9;
+}
+
+/*section review*/
+.review {
+    width: 100%;
+    padding: 150px 0;
+    background: url(../img/index_review_1.png), url(../img/index_review_2.png), #fff;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    background-size: auto 90%;
+    position: relative;
+}
+.review ul {
+    overflow: hidden;
+    width: 100%;
+}
+.review ul li {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    line-height: 1.7;
+    font-size: 18px;
+    color: rgb(88,25,16);
+    background: rgba(255,255,255,0.5);
+    transition: all 0.3s;
+}
+.review ul li:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+.review ul li:nth-child(2n) {
+    margin-top: 100px;
+}
+.review i {
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/*responsive*/
+@media screen and (max-width:1599px) {
+    .main .mainTitle {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .main .mainTitle h2 {
+    font-size: 3.5em;
+    }
+    .each {
+        background-attachment: initial;
+    }
+    .price {
+        background-attachment: initial;
+    }
+    .review {
+        background-size: auto 70%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .main .mainTitle {
+        width: 80%;
+    }
+    .each ul li {
+        width: 47%;
+        margin-right: 6%;
+        padding: 30px;
+    }
+    .price ul li {
+        width: 47%;
+        margin-right: 6%;
+        padding: 30px;
+    }
+    .price ul li a {
+        padding: 9px 40px;
+    }
+    .review {
+        padding: 60px 0;
+        background-image: none;
+    }
+}
+@media screen and (max-width:414px) {
+    .main .mainTitle {
+        width: 90%;
+    }
+    .main .mainTitle h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    .main .mainTitle p:after {
+        top: 160%;
+        background-size: 200px 40px;
+        width: 200px;
+        height: 40px;
+    }
+    .main .mainTitle a.hover_effect {
+        font-size: 1.3em;
+        width: 230px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 0 20px 0;
+    }
+    .main .mainTitle a.hover_effect span {
+        width: 230px;
+        margin: 0;
+        padding: 0;
+    }
+    .works ul li {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .works ul li:last-child {
+        margin-bottom: 0;
+    }
+    .each ul li {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+        padding: 25px;
+    }
+    .each ul li:last-child {
+        margin-bottom: 0;
+    }
+    .teas>ul {
+        display: none;
+    }
+    .teas .inner ul li {
+        float: none;
+        width: 100%;
+    }
+    .teas .inner ul li:before {
+        content: '';
+        display: block;
+        width: auto;
+        height: 260px;
+        background: url(../img/teas_2.png) no-repeat center/contain;
+        margin-bottom: 20px;
+    }
+    .teas .inner ul li:nth-child(2):before {background-image: url(../img/teas_3.png);}
+    .teas .inner ul li:nth-child(3):before {background-image: url(../img/teas_1.png);}
+    .teas .inner ul li:nth-child(4):before {background-image: url(../img/teas_5.png);}
+    .price ul li {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+        padding: 25px;
+    }
+    .price ul li:last-child {
+        margin-bottom: 0;
+    }
+    .review ul li {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .review ul li:nth-child(2n) {
+        margin-top: 0;
+    }
+}

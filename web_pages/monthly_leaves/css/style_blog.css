@@ -1,0 +1,456 @@
+/*blog*/
+
+/*section featured*/
+.featured {
+    width: 100%;
+    margin-top: 100px;
+    padding: 60px 0;
+}
+.featured .left {
+    float: left;
+    width: 61%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.featured .right {
+    float: right;
+    width: 37%;
+    height: 500px;
+    overflow: hidden;
+}
+.featured .right > div {
+    width: 100%;
+    height: 47%;
+    position: relative;
+    margin-bottom: 6%;
+    overflow: hidden;
+}
+.featured .right > div:nth-child(2) {
+    margin-bottom: 0;
+}
+.featured a {
+    width: 100%;
+    height: 100%;
+}
+.featured .bgimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.featured .left .bgimg {
+    background: url(../img/blog_1.jpg) no-repeat center /cover;
+}
+.featured .right .up .bgimg{
+    background: url(../img/blog_3.jpg) no-repeat center /cover;
+}
+.featured .right .down .bgimg{
+    background: url(../img/blog_5.jpg) no-repeat center /cover;
+}
+.featured .bgimg:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    transition: all 0.5s;
+}
+.featured .left:hover .bgimg,
+.featured .right .up:hover .bgimg,
+.featured .right .down:hover .bgimg {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.featured .left:hover .bgimg:before,
+.featured .right .up:hover .bgimg:before,
+.featured .right .down:hover .bgimg:before {
+    background: rgba(0,0,0,0);
+    transition: all 0.5s;
+}
+.featured .textBox {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Philosopher', sans-serif;
+}
+.featured .textBox h3 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.featured .right .textBox h3 {
+    font-size: 2.7em;
+}
+.featured .textBox:hover {
+    text-shadow: 1px 1px 2px #000;
+}
+.featured .textBox:hover h3 {
+    color: rgb(131,199,217);
+    text-decoration: underline;
+}
+.featured .textBox span.date {
+    color: #fff;
+    margin-right: 40px;
+}
+.featured .textBox span.date:before {
+    content: '\f017';
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+.featured .textBox span.color {
+    color: #f2807d;
+}
+
+/*category*/
+.category {
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+.category .category_menu {
+    float: right;
+    width: 25%;
+    margin-right: 5%;
+}
+.category .category_menu form {
+    position: relative;
+    width: 250px;
+}
+.category .category_menu form input[type="text"] {
+    background: #f5f5f5;
+    line-height: 32px;
+    width: 250px;
+    font-size: 22px;
+}
+.category .category_menu form button {
+    display: inline-block;
+    height: 100%;
+    line-height: 32px;
+    color: #f2807d;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.category .category_menu p {
+    font-size: 22px;
+    margin: 20px 0;
+    color: rgb(88,25,16);
+}
+.category .category_menu ul {
+    margin-bottom: 20px;
+}
+.category .category_menu ul li {
+    color: rgb(88,25,16);
+    line-height: 1.6;
+}
+.category .category_menu ul li:hover {
+    color: #eb8c5f;
+}
+.category .category_menu ul li:before {
+    content: '\f054';
+    font-family: FontAwesome;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.category ul.posts {
+    float: left;
+    width: 68%;
+}
+.category ul.posts li {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.category ul.posts li:after {/*float clear*/
+    content: '';
+    display: block;
+    clear: both;
+}
+.category ul.posts li p.img {
+    float: right;
+    width: 40%;
+    height: auto;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.category ul.posts li p.img:hover img {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.category ul.posts li p.img img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.category ul.posts li p.small {
+    color: #eb8c5f;
+}
+.category ul.posts li p.small span {
+    color: #999;
+    margin-left: 40px;
+}
+.category ul.posts li h3 {
+    color: #444;
+    font-size: 2em;
+    padding: 20px 0;
+}
+.category ul.posts li p.text {
+    text-indent: 5%;
+    margin-bottom: 40px;
+}
+.category ul.posts li a.hover_effect {
+    background: rgb(131,199,217);
+    color: #fff;
+    transition: all 0.5s;
+}
+.category ul.posts li a.hover_effect:before,
+.category ul.posts li a.hover_effect:after,
+.category ul.posts li a.hover_effect span:before,
+.category ul.posts li a.hover_effect span:after {
+    background: rgb(131,199,217);
+}
+.category ul.posts li a.hover_effect:hover,
+.category ul.posts li a.hover_effect:focus {
+    background: rgba(0,0,0,0);
+    color: rgb(131,199,217);
+    transition: all 0.5s;
+}
+
+/*latest*/
+.latest {
+    width: 100%;
+    padding: 60px 0;
+}
+.latest .select {
+    background: #f5f5f5;
+}
+.latest .select ul {
+    overflow: hidden;
+    padding: 0 30px;
+}
+.latest .select ul li {
+    float: left;
+}
+.latest .select ul li a {
+    display: block;
+    padding: 20px 30px;
+    width: 100%;
+    height: 100%;
+}
+.latest .select ul li a:hover {
+    color: #eb8c5f;
+}
+.latest .select ul li.selected {
+    background: #fff;
+    color: #eb8c5f;
+}
+.latest .content {
+    overflow: hidden;
+    width: 100%;
+}
+.latest .content li {
+    float: left;
+    width: 48.5%;
+    height: 365px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.latest .content li:nth-child(2n-1) {
+    margin-right: 3%;
+}
+.latest .content li .bgimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.latest .content li .img1 {background: url(../img/blog_5.jpg) no-repeat center /cover;}
+.latest .content li .img2 {background: url(../img/blog_6.jpg) no-repeat center /cover;}
+.latest .content li .img3 {background: url(../img/blog_7.jpg) no-repeat center /cover;}
+.latest .content li .img4 {background: url(../img/blog_8.jpg) no-repeat center /cover;}
+.latest .content li .img5 {background: url(../img/blog_9.jpg) no-repeat center /cover;}
+.latest .content li .img6 {background: url(../img/blog_10.jpg) no-repeat center /cover;}
+.latest .content li .img7 {background: url(../img/blog_11.jpg) no-repeat center /cover;}
+.latest .content li .img8 {background: url(../img/blog_1.jpg) no-repeat center /cover;}
+.latest .content li .img9 {background: url(../img/blog_2.jpg) no-repeat center /cover;}
+.latest .content li .img10 {background: url(../img/blog_3.jpg) no-repeat center /cover;}
+.latest .content li .bgimg:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    transition: all 0.5s;
+}
+.latest .content li:hover .bgimg {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.latest .content li:hover .bgimg:before {
+    background: rgba(0,0,0,0);
+    transition: all 0.5s;
+}
+.latest .content li .textBox {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Philosopher', sans-serif;
+}
+.latest .content li .textBox h3 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.latest .content li .textBox:hover {
+    text-shadow: 1px 1px 2px #000;
+}
+.latest .content li .textBox:hover h3 {
+    color: rgb(131,199,217);
+    text-decoration: underline;
+}
+.latest .content li .textBox span.date {
+    color: #fff;
+    margin-right: 40px;
+}
+.latest .content li .textBox span.date:before {
+    content: '\f017';
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+.latest .content li .textBox span.color {
+    color: #f2807d;
+}
+
+
+/*responsive*/
+@media screen and (max-width:1599px) {
+    .featured .left,
+    .featured .right {
+        height: 480px;
+    }
+    .latest .content li {
+        height: 330px;
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .featured {
+        margin-top: 80px;
+    }
+    .featured .left,
+    .featured .right {
+        height: 400px;
+    }
+    .latest .content li {
+        height: 280px;
+        margin-top: 25px;
+    }
+    .featured .textBox h3 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    .featured .right .textBox h3 {
+        font-size: 2em;
+    }
+    .category ul.posts li {
+        margin-bottom: 40px;
+    }
+    .category ul.posts li h3 {
+        font-size: 1.7em;
+    }
+    .category ul.posts li p.text {
+        margin-bottom: 20px;
+    }
+    .latest .content li .textBox h3 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .featured .textBox span.date,
+    .latest .content li .textBox span.date {
+        margin-right: 26px;
+    }
+    .category ul.posts li p.small span {
+        margin-left: 26px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .category .category_menu {
+        margin-right: 0;
+        width: 30%;
+    }
+    .category .category_menu form {
+        width: 100%;
+    }
+    .category .category_menu form input[type="text"] {
+        width: 100%;
+    }
+    .latest .select ul li a {
+        padding: 12px 15px;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .featured {
+        padding: 30px 0;
+    }
+    .featured .left {
+        float: none;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 6%;
+    }
+    .featured .right {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    .featured .right > div {
+        height: 300px;
+    }
+    .featured .right .textBox h3,
+    .featured .left .textBox h3 {
+        font-size: 2.5em;
+    }
+    .category {
+        padding: 30px 0;
+    }
+    .category .category_menu {
+        float: none;
+        width: 100%;
+    }
+    .category .category_menu > p,
+    .category .category_menu > ul {
+        display: none;
+    }
+    .category .category_menu form {
+        display: inline-block;
+        margin: 0 auto 30px;
+    }
+    .category ul.posts {
+        float: none;
+        width: 100%;
+    }
+    .latest {
+        padding: 30px 0;
+    }
+    .latest .content li {
+        float: none;
+        width: 100%;
+        width: 100%;
+    }
+    .latest .content li:nth-child(2n-1) {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+/*reset*/
+* {margin: 0;padding: 0;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+
+
+/*
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+/*layout*/
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+.inner {
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+.clear {
+    clear: both;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 71px;
+    background: #fff;
+}
+.innerHeader {
+    overflow: hidden;
+}
+.innerHeader .logo {
+    float: left; 
+    line-height: 71px;
+}
+.innerHeader .logo a {
+    display: inline-block;
+    padding-right: 20px;
+}
+.innerHeader .search {
+    float: left;
+    display: inline-block;
+    line-height: 71px;
+    padding:0 21px;
+    margin-right: 125px;
+}
+.innerHeader .gnb ul li {
+    float: left;
+    line-height: 71px;
+    margin-right: 52px;
+}
+.innerHeader .gnb ul li a {
+    font-size: 14px;
+    display: block;
+    color: #ccc;
+}
+.innerHeader .gnb ul li:first-child a {
+    color: #000;
+}
+.innerHeader ul.snsLink {
+    float: right;
+}
+.innerHeader ul.snsLink li {
+    float: left;
+    line-height: 71px;
+}
+.innerHeader ul.snsLink li a {
+    display: block;
+    padding: 0 9px;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    border-top: 1px solid #aaa;
+    overflow: hidden;
+    position: relative;
+}
+footer .menuBar {
+    height: 52px;
+    background: #fff;
+}
+footer .menuBar ul {
+    float: left;
+}
+footer .menuBar ul li {
+    float: left;
+    line-height: 52px;
+}
+footer .menuBar .snsLogo li a {
+    display: block;
+    padding: 0 15px; 
+}
+footer .menu {
+    margin-left: 224px;
+}
+footer .menu li a {
+    display: block;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+footer .menu li a:hover {
+    color: #555;
+}
+footer .address,
+footer .tel {
+    text-align: center;
+    line-height: 36px;
+    color: #848484;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+footer strong {
+    color: #000;
+}
+footer .address {
+    margin-top: 30px;
+}
+footer .tel {
+    position: relative;
+    float: right;
+    left: -50%;
+}
+footer .tel li {
+    position: relative;
+    float: left;
+    left: 50%;
+    margin-right: 20px;
+}
+footer .tel li:last-child {
+    margin-right: 0;
+}
+footer .copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #848484;
+    text-align: center;
+    margin-top: 20px;
+}
+footer .logos {
+    position: relative;
+    float: right;
+    left: -50%;
+    margin: 20px 0;
+}
+footer .logos li {
+    position: relative;
+    float: left;
+    left: 50%;
+    margin-right: 40px;
+}
+footer .logos li:last-child {
+    margin-right: 0;
+}
+footer .go_to_top {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: block;
+}

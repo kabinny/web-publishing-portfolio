@@ -1,0 +1,283 @@
+/*sub common style*/
+
+
+/*section*/
+section {
+    padding: 170px 0;
+}
+section .inner {
+    overflow: hidden;
+}
+
+/*h2*/
+section h2 {
+    font-size: 2.4em;
+    color: var(--grapefruit);
+    font-family: averta, sans-serif;
+    position: relative;
+    margin-bottom: 100px;
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+section h2:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+}
+section h2:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 1px;
+    background-color: var(--grapefruit);
+    top: 50%;
+    z-index: -3;
+    width: 1000%;
+}
+
+/*layout*/
+.text50 {
+    width: 50%;
+    margin-left: 50%;
+    margin-bottom: 140px;
+    line-height: 2;
+}
+p.img img {width: 100%;}
+
+
+/* imgSize */
+/*resoponsive img size*/
+.imgRes {
+    border: 1px solid var(--grapefruit);
+    position: relative;
+    overflow: hidden;
+}
+
+/*img size small 350*/
+p.img.smallImg {
+    border: 1px solid var(--grapefruit);
+    width: 48%;
+    padding-top: 29%;
+    position: relative;
+    overflow: hidden;
+}
+/*img size medium 450*/
+p.img.mediumImg {
+    border: 1px solid var(--grapefruit);
+    width: 48%;
+    padding-top: 37%;
+    position: relative;
+    overflow: hidden;
+}
+p.img.mediumImg img,
+p.img.smallImg img,
+.imgRes img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+p.img.mediumImg:nth-child(1),
+p.img.smallImg:nth-child(1),
+.imgRes:nth-child(1) {animation-duration: 0.2s;}
+
+/*mockup img*/
+.mockUp {
+    width: 50%;
+    padding-top: 33%;
+    position: relative;
+    overflow: hidden;
+}
+.mockUp:nth-child(1) {animation-duration: 0.2s;}
+.mockUp img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+/* //img Size*/
+
+/*main*/
+#main {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+#main p.img {
+    margin-bottom: 70px;
+}
+#main .link {
+    width: 1260px;
+    margin-bottom: 80px;
+}
+#main .slide {width: 15%;}
+
+#main p.img.show,
+#main .link button.show {
+    animation-name: show-img;
+    animation-duration: 0.5s;
+    transition: all 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes show-img {
+    0% {transform: translateY(-100vh);opacity: 0;}
+    75%, 90% {transform: translateY(0);}
+    80% {transform: translateY(-1vh);}
+    100% {transform: translateY(0);opacity: 1;}
+}
+#main .link button:nth-child(1) {animation-duration: 0.1s;}
+#main .link button:nth-child(2) {animation-duration: 0.3s;}
+#main .link button:nth-child(4) {animation-duration: 0.5s;}
+
+
+
+/*intro*/
+#intro h2:before {display: none;}
+#intro h2 {
+    display: inline-block;
+}
+#intro p {
+    width: 50%;
+    line-height: 1.7;
+    animation-duration: 0.6s;
+}
+
+#intro .link {
+    margin-top: 180px;
+}
+
+/*workflow*/
+#workflow ul li {
+    width: 18%;
+    text-align: center;
+}
+#workflow ul li p.img {width: 100%;margin-bottom: 40px;}
+#workflow ul li p.img img {width: 100%;}
+#workflow ul li:nth-child(1) {animation-duration: 0.2s;}
+#workflow ul li:nth-child(2) {animation-duration: 0.4s;}
+#workflow ul li:nth-child(3) {animation-duration: 0.6s;}
+#workflow ul li:nth-child(4) {animation-duration: 0.8s;}
+
+/*style*/
+#style .rowAr li {
+    width: 13%;
+    text-align: center;
+}
+#style .rowAr li p.img {width: 100%;margin-bottom: 24px;}
+#style .rowAr li p.img img {width: 100%;}
+#style .rowAr.font {margin-top: 140px;}
+#style .rowAr.font li {
+    width: 45%;
+}
+
+#style li:nth-child(1) {animation-duration: 0.2s;}
+#style li:nth-child(2),
+#style .font:nth-child(1) {animation-duration: 0.4s;}
+#style li:nth-child(3) {animation-duration: 0.6s;}
+#style li:nth-child(4) {animation-duration: 0.8s;}
+#style li:nth-child(5) {animation-duration: 1s;}
+
+/*next*/
+#next {
+    margin-bottom: 180px;
+}
+#next .box {
+    width: 100%;
+    display: block;
+    border-radius: 36px;
+    padding: 96px 130px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+#next .box:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#next .box:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+#next .box h2 {
+    color: #fff;
+    font-size: 2em;
+    font-family: averta, sans-serif;
+}
+#next .box p {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+
+/*1599*/
+@media screen and (max-width:1599px) {
+    
+}
+/*1024*/
+@media screen and (max-width:1024px) {
+    #main .link {width: 80%;}
+    #main .slide {width: 20%;}
+}
+/*768*/
+@media screen and (max-width:768px) {
+    section {padding: 140px 0;}
+    .text50 {width: 70%;margin-left: 30%;margin-bottom: 110px;}
+    
+    #main .link {width: 85%;}
+    
+    #workflow ul li {width: 20%;}
+    #workflow ul li p.text {font-size: 0.8em;}
+    
+    #style .rowAr li {width: 16%;}
+    #style .rowAr li p.text {font-size: 0.8em;}
+    
+    #next {margin-bottom: 120px;}
+    #next .box {padding: 80px 100px;}
+}
+/*425*/
+@media screen and (max-width:425px) {
+    .text50 {width: 100%;margin-left: 0;}
+    p.img.mediumImg {width: 99%;margin-bottom: 50px;padding-top: 74%;}
+    p.img.smallImg {width: 99%; margin-bottom: 50px;padding-top: 58%;}
+    .mockUp {width: 100%; padding-top: 66%;}
+    .mockUp:first-child {margin-bottom: 50px;}
+    
+    #intro .rowBt {display: block;}
+    #intro .rowBt p {width: 100%;}
+    #intro .link {margin-top: 120px;}
+    
+    #workflow .rowAr {display: block;}
+    #workflow .rowAr li {display: flex;width: 100%;justify-content: space-around;align-items: center;}
+    #workflow .rowAr li p.img {width: 50%;}
+    #style .rowAr {display: block;}
+    #style .rowAr li {display: flex;width: 100%;justify-content: space-around;align-items: center;}
+    #style .rowAr li p.img {width: 30%;}
+    #style .rowAr.font li, #style .rowAr.font li p.img {width: 100%;}
+    
+    #next .box {padding: 40px 20px;}
+    #next .box h2 {font-size: 1.8em;margin-bottom: 10px;}
+}

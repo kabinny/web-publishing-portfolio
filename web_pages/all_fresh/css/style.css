@@ -1,0 +1,496 @@
+@charset "UTF-8";
+/*@import ('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR&display=swap&subset=korean');*/
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR&display=swap');
+
+/*reset*/
+* {margin: 0;padding: 0;}
+a {color: inherit;text-decoration: none;}
+li {list-style: none;}
+h1 {margin: 0;padding: 0;}
+
+/*layout*/ 
+body {
+    font-size: 16px;
+    color: #444;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.wrap {
+    position: relative;
+    margin: 0 auto;
+}
+
+/*header*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(74,41,34,0.8);
+    z-index: 200;
+    top: 0;
+    left: 0;
+    font-family: 'Nanum Myeongjo', serif;
+}
+.innerHeader {
+    width: 1280px;
+    margin: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.innerHeader .logo {
+    float: left; 
+    color: #fff;
+    line-height: 100px;
+}
+.innerHeader .gnb {
+    float: right;
+}
+.innerHeader .gnb ul li {
+    float: left;
+    margin-left: 50px;
+}
+.innerHeader .gnb ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgba(255,255,255,0.73);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 100px;
+    transition: all 0.5s;
+}
+.innerHeader .gnb ul li a:hover,
+.innerHeader .gnb ul li a:focus {
+    color: #e29141;
+}
+
+/*main*/
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../img/images_1.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+}
+.main .mainTitle {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main .mainTitle p.img {
+    margin-bottom: 30px;
+}
+.btn {
+    font-family: 'Nanum Myeongjo', serif;
+    display: inline-block;
+/*    margin-top: 30px;*/
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 18px;
+    color: #444;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    transition: all 0.5s;
+}
+
+/*fruit*/
+.fruit {
+    text-align: center;
+}
+.fruit ul {
+    width: 100%;
+    overflow: hidden;
+}
+.fruit ul li {
+    float: left;
+    width: 50%;
+    height: 600px;
+    position: relative;
+}
+/*첫번째 li*/
+.fruit ul li> a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    text-align: center;
+}
+.fruit ul li h3 {
+    font-family: 'Nanum Myeoungjo', serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+/*두번째 li*/
+.fruit ul li:nth-child(2) {
+    background: url(../img/box-bg.jpg) no-repeat center/cover;
+}
+.fruit ul li:nth-child(2) .titleBox {
+    background: rgba(255, 255, 255, 0.7);
+    width: 60%;
+    height: 65%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+.fruit ul li:nth-child(2) .titleBox h3 {
+    margin-bottom: 70px;
+}
+.fruit ul li:nth-child(2) .titleBox p {
+    margin-bottom: 70px;
+}
+
+/*event*/
+.event {
+    width: 100%;
+    background: #fff;
+}
+.event ul {
+    overflow: hidden; 
+}
+.event ul li {
+    float: left;
+    width: 50%;
+    height: 420px;
+    position: relative;
+    box-sizing: border-box;
+}
+.event ul li .text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 260px;
+    text-align: center;
+}
+.event ul li .text h3 {
+    font-size: 24px;
+    margin-bottom: 35px;
+    font-family: 'Nanum Myeongjo',serif;
+}
+.event ul li .text p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.event ul li:nth-child(1) {
+    background: url(../img/event_01.png) no-repeat top 0px right 30px;
+    background-color: #fff;
+    position: relative;
+}
+/*center line*/
+.event ul li:nth-child(1):after {
+    content: '';
+    width: 1px;
+    height: 70%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #eaeaea;
+}
+.event ul li:nth-child(2) {
+    background: url(../img/event_02.png) no-repeat top 20px right 30px;
+    background-size: 450px;
+    background-color: #fff;
+}
+
+/*story*/
+.story {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.story .left {
+    width: 50%;
+    height: 800px;
+    float: left;
+    background: url(../img/story_01.jpg) no-repeat center/cover;
+}
+.story .right {
+    width: 50%;
+    height: 800px;
+    float: right;
+    background: url(../img/story_02.jpg) no-repeat center/cover; 
+}
+.story .left>.boxColor {
+    width: 100%;
+    height: 100%;
+    background: rgba(219,78,4,0.85);
+    position: relative;
+}
+.story .right>.boxColor {
+    width: 100%;
+    height: 100%;
+    background: rgba(29,16,10,0.87);
+    position: relative;
+}
+.story .left>.boxColor .innerText,
+.story .right>.boxColor .innerText {
+    color: #fff;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.story .left>.boxColor .innerText h3,
+.story .right>.boxColor .innerText h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.story .left>.boxColor .innerText p,
+.story .right>.boxColor .innerText p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.story .left>.boxColor .innerText .btn,
+.story .right>.boxColor .innerText .btn {
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/*sommelier*/
+.sommelier {
+    width: 100%;
+    padding-top: 100px;
+}
+.sommelier .titleBox {
+    text-align: center;
+}
+.sommelier .titleBox h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+.sommelier .titleBox p {
+    margin-bottom: 50px;
+}
+.sommelier ul {
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow: hidden;
+    padding: 0 50px;
+}
+.sommelier ul li {
+    float: left;
+    width: 31.33333%;
+    margin-right: 3%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.sommelier ul li:nth-child(3n-2) {
+    margin-top: 100px;
+}
+.sommelier ul li:nth-child(3n) {
+    margin-top: 100px;
+    margin-right: 0;
+}
+.sommelier ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+.sommelier ul li a:hover,
+.sommelier ul li a:focus {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+.sommelier ul li a p.img {
+    width: 100%;
+    height: 400px;
+}
+.sommelier ul li a p.img img {
+    width: 100%;
+}
+.sommelier ul li a:hover p.img img {
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+/*offline*/
+.offline {
+    width: 100%;
+    overflow: hidden;
+    padding: 100px 0;
+}
+.offline .inner {
+    width: 1280px;
+    margin: auto;
+    font-family: 'Nanum Myeongjo', serif;
+}
+.offline .inner .left {
+    width: 620px;
+    height: 630px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 40px;
+    background: url(../img/story_01.png) no-repeat center/cover;
+}
+.offline .inner .left a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.offline .inner .right {
+    float: right;
+    width: 620px;
+    height: 100%; 
+}
+.offline .inner .right .top {
+    background: url(../img/story_03.png) no-repeat center/cover;
+}
+.offline .inner .right a {
+    display: block;
+    width: 100%;
+    height: 315px;
+    margin-top: -40px;
+    position: relative;
+}
+.offline .inner .right .bottom a {
+    display: block;
+    width: 100%;
+    height: 315px;
+    background: url(../img/story_04.png) no-repeat center/cover;
+    margin-top: 40px;
+    text-align: right;
+    position: relative;
+}
+.offline .inner {
+    line-height: 1.6;
+    font-weight: bold;
+}
+.offline .inner span {
+    margin-bottom: 15px;
+    display: block;
+}
+.offline .inner h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+/*text box*/
+.offline .inner .left a .text {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.offline .inner .right .top a .text {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+}
+.offline .inner .right .bottom a .text {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+}
+
+/*login*/
+.login {
+    width: 100%;
+    padding: 70px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.login .titleBox {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.login .titleBox h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.login .titleBox>p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.login .titleBox ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+.login .titleBox ul li:nth-child(2) {
+    margin-right: 0;
+}
+
+/*delivery*/
+.delivery {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.delivery>ul {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.delivery>ul>li {
+    width: 50%;
+    float: left;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+.delivery>ul>li:last-child {
+    border-right: 1px solid transparent;
+}
+.delivery ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.delivery ul li h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.delivery ul li p.tel,
+.delivery ul li p.lookup {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.delivery ul li p.time,
+.delivery ul li p.address {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.delivery ul li span {
+    font-weight: bold;
+}
+.delivery ul li .question ul {
+    position: relative;
+    left: 50%;
+    transform: translateX(-25%);
+}
+.delivery ul li .question ul li {
+    float: left;
+    margin-right: 50px;
+    line-height: 1.8;
+}
+
+/*footer*/
+footer {
+    margin: 60px;
+}
+footer .footerAdress {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+}

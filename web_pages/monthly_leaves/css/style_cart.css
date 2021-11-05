@@ -1,0 +1,230 @@
+/*cart*/
+
+/*section checkout*/
+.checkout {
+    width: 100%;
+    padding: 60px 0;
+    margin-top: 100px;
+    color: rgb(88,25,16);
+}
+
+/*cart (left)*/
+.checkout .cart {
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+}
+.checkout .cart p.img {
+    width: 100%;
+}
+.checkout .cart p.img img {
+    width: 100%;
+}
+.checkout .cart h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    text-align: left;
+}
+.checkout .cart h2:after {
+    background-image: none;
+}
+.checkout .cart p.text {
+    width: 100%;
+    line-height: 1.7;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+.checkout .cart p.text:before {
+    content: '\f057';
+    font-family: FontAwesome;
+    color: #ec3218;
+    cursor: pointer;
+}
+.checkout .cart p.text span {
+    font-weight: normal;
+    font-size: 0.8em;
+}
+.checkout .cart p.text .price {
+    font-size: 1.3em;
+    float: right;
+}
+.checkout .cart .shipping {
+    padding: 8px 0;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 20px;
+}
+.checkout .cart .shipping span {
+    float: right;
+}
+.checkout .cart .total {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.checkout .cart .total span {
+    float: right;
+}
+.checkout .cart form input {
+    float: none;
+}
+
+/*button*/
+.checkout button.hover_effect {
+    margin: 20px 0;
+    background: #f2807d;
+    border: none;
+    color: #fff;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.checkout button.hover_effect:before,
+.checkout button.hover_effect:after,
+.checkout button.hover_effect span:before,
+.checkout button.hover_effect span:after {
+    background: #f2807d;
+}
+.checkout button.hover_effect:hover,
+.checkout button.hover_effect:focus {
+    background: transparent;
+    color: #f2807d;
+    transition: all 0.5s;
+}
+
+/*input,select box size*/
+.checkout input,
+.checkout select {
+    line-height: 38px;
+    height: 38px;
+    font-size: 1rem;
+    padding-left: 5px;
+    margin: 5px 0;
+    float: left; /*인풋요소 사이의 공백을 없애기 위해*/
+    box-sizing: border-box;
+}
+
+/*form (right)*/
+.checkout .form {
+    float: right;
+    width: 52%;
+    margin-right: 5%;
+}
+.checkout .form fieldset {
+    border: 0;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.checkout .form legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.checkout .form label {
+    line-height: 38px;
+}
+.checkout .form label input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 5px;
+    float: none;
+}
+
+/*input width*/
+#user_id {width: 35%;margin-right: 2%;}
+#user_pw {width: 35%;margin-right: 28%;}
+#user_f_name {width: 49%;margin-right: 2%;}
+#user_l_name {width: 49%;}
+#user_company {width: 100%;}
+#address_street {width: 70%;margin-right: 2%;}
+#address_apt {width: 28%;}
+#address_city {width: 34%;margin-right: 2%;}
+#address_province {width: 34%;margin-right: 2%;}
+#postal {width: 28%;}
+#country {width: 70%;margin-right: 30%;}
+#user_tel {width: 100%;}
+#credit_card {width: 49%;margin-right: 2%;}
+#cvc {width: 23.5%;margin-right: 2%;}
+#month {width: 23.5%;margin-right: 2%;}
+#year {width: 23.5%;margin-right: 25.5%;}
+#cc_postal {width: 23.5%;margin-right: 2%;}
+#cc_state {width: 74.5%;}
+
+label[for="gift"] {
+    background: #fafafa;
+    padding-left: 10px;
+    color: rgb(131,199,217);
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+label[for="gift"] i {
+    font-size: 20px;
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cc p {
+    color: #999;
+}
+.cc i {
+    font-size: 2em;
+    vertical-align: middle;
+    line-height: 38px;
+    margin: 5px 0;
+}
+
+
+/*responsive*/
+@media screen and (max-width:1599px) {
+    .checkout .cart {
+        margin-left: 0;
+        width: 35%;
+    }
+    .checkout .form {
+        margin-right: 0;
+    }
+    .cc i {
+    font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .checkout {
+        margin-top: 80px;
+    }
+    .checkout .cart {
+        width: 37%; /* <- 35% <- 30%*/
+    }
+    .checkout .form {
+        width: 58%; /*<- 52%*/
+    }
+    #user_id {
+        width: 49%;
+        margin-right: 2%;
+    }
+    #user_pw {
+        width: 49%;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .checkout .cart,
+    .checkout .form {
+        float: none;
+        margin: 0 auto;
+        width: 90%; 
+    }
+    .checkout .cart {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .checkout .form label {
+        line-height: 18px;
+    }
+    #user_id, #user_pw, #user_f_name, #user_l_name, #user_company, #address_street, #address_apt, #address_city, #address_province, #postal, #country, #user_tel, #credit_card, #cvc, #month, #year, #cc_postal, #cc_state {
+        width: 100%;margin-right: 0;
+    }
+}

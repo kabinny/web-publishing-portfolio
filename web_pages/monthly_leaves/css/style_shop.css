@@ -1,0 +1,358 @@
+/*shop*/
+
+/*section main*/
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.main:before {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(../img/shop_main.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.main:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(88,25,16,1) 10%, rgba(88,25,16,0));
+}
+.main .mainTitle {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+.main .mainTitle h2 {
+    font-size: 3.8em;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    color: #fff;
+    animation-name: maintitle;
+    animation-duration: 1.5s;
+}
+@keyframes maintitle {
+    0% {opacity: 0;letter-spacing: -10px;}
+    30% {opacity: 0;letter-spacing: -10px;}
+    100% {opacity: 1;letter-spacing: 5px;}
+}
+.main .mainTitle h2:after {
+    background-image: none;
+}
+.main .mainTitle p {
+    font-size: 1.2em;
+    margin-bottom: 120px;
+    position: relative;
+}
+.main .mainTitle p:after {
+    content: '';
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/line_white.png);
+    background-repeat: no-repeat;
+    background-size: 300px 60px;
+    width: 300px;
+    height: 60px;
+}
+.main .mainTitle p.img img {
+    width: 100%;
+    height: 100%;
+}
+.main .mainTitle a {
+    color: #fff;
+    background: #83c7d9;
+    animation-name: showup;
+    animation-duration: 1.2s;
+}
+@keyframes showup {
+    0% {opacity: 0;transform: translateY(170%);}
+    30% {opacity: 0;transform: translateY(170%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.main .mainTitle a:hover,
+.main .mainTitle a:focus {
+    background: rgba(255,255,255,0);
+}
+
+
+/*section product*/
+.product {
+    width: 100%;
+    padding: 60px 0;
+    background: #fff;
+}
+.product .row {
+    text-align: center;
+    width: 100%;
+}
+.product .row ul {
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+.product .row ul li {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+.product .row ul li.active {
+    animation-name: productUp;
+    animation-duration: 0.8s;
+}
+@keyframes productUp {
+    0% {opacity: 0;transform: translateY(30%);}
+    30% {opacity: 0;transform: translateY(30%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.product .row ul li:nth-child(2) {animation-duration: 1s;}
+.product .row ul li:nth-child(3) {animation-duration: 1.2s;}
+.product .row ul li:nth-child(4) {animation-duration: 1.4s;}
+
+.product .row ul li:hover p.img,
+.product .row ul li:focus p.img{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.product .row ul li p.img {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+.product .row ul li p.img img {
+    width: 100%;
+    height: 100%;
+}
+.product .row ul li .tea_name {
+    font-size: 1.2em;
+    color: rgb(88,25,16);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.product .row ul li .price {
+    color: rgb(131,199,217);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.product .row ul li .star {
+    color: rgb(131,199,217);
+    font-size: 1.1em;
+}
+
+/*section free*/
+.free {
+    width: 100%;
+    background: url(../img/shop_free.jpg) no-repeat center / cover;
+    padding: 120px 0;
+}
+.free .inner {
+    text-align: center;
+}
+.free h2 {
+    color: #fff;
+    font-size: 4em;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.free h2:after {
+    background-image: none;
+}
+.free i {
+    color: #fff;
+    font-size: 2em;
+    margin: 30px 0;
+    margin-left: -70%;
+}
+.free p {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+/*section sns*/
+.sns {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    background: #fff;
+}
+.sns ul {
+    width: 100%;
+    overflow: hidden;
+}
+.sns ul li {
+    float: left;
+    width: 15%;
+    height: 192px;
+    margin-right: 2%;
+    overflow: hidden;
+    opacity: 0;
+}
+.sns ul li.active {
+    animation-name: snsup;
+    animation-duration: 0.8s;
+}
+@keyframes snsup {
+    0% {opacity: 0;transform: translateY(30%);}
+    30% {opacity: 0;transform: translateY(30%);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+.sns ul li:nth-child(2) {animation-duration: 1s;}
+.sns ul li:nth-child(3) {animation-duration: 1.2s;}
+.sns ul li:nth-child(4) {animation-duration: 1.4s;}
+.sns ul li:nth-child(5) {animation-duration: 1.6s;}
+.sns ul li:nth-child(6) {animation-duration: 1.8s;}
+.sns ul li:hover a {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.sns ul li:last-child {
+    margin-right: 0;
+}
+.sns ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.sns ul li a img {
+    width: 100%;
+    height: 100%;
+}
+
+/*section subscribe*/
+.subscribe {
+    text-align: center;
+    background: #f2f2f2;
+    padding: 60px 0;
+}
+.subscribe form {
+    background: #c2c2c2;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.subscribe form input[type="email"] {
+    border: none;
+    width: 250px;
+    background: transparent;
+    line-height: 30px;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+.subscribe form input[type="submit"] {
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    background: #f2807d;
+    padding: 0 32px;
+    border: none;
+    line-height: 40px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.subscribe form input[type="submit"]:hover,
+.subscribe form input[type="submit"]:focus {
+    background: #fff;
+    color: #f2807d;
+    transition: all 0.5s;
+}
+
+
+/*responsive*/
+@media screen and (max-width:1599px) {
+    .sns ul li {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .main .mainTitle {
+        width: 80%;
+    }
+    .main .mainTitle h2 {
+    font-size: 3.4em;
+}
+
+@media screen and (max-width:768px) {
+    .product .row ul li {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .main .mainTitle {
+        width: 90%;
+    }
+    .main .mainTitle h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    .main .mainTitle p:after {
+        top: 160%;
+        background-size: 200px 40px;
+        width: 200px;
+        height: 40px;
+    }
+    .main .mainTitle a.hover_effect {
+        font-size: 1.3em;
+        width: 230px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 0 20px 0;
+    }
+    .main .mainTitle a.hover_effect span {
+        width: 230px;
+        margin: 0;
+        padding: 0;
+    }
+    .product .row ul li {
+        padding: 10px;
+    }
+    .free {
+        padding: 60px 0;
+    }
+    .sns ul li {
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 5px;
+    }
+    .sns ul li:nth-child(3n) {
+        margin-right: 0;
+    }
+    .subscribe form input[type="email"] {
+        width: 50%;
+        margin-left: 10px;
+        float: left;
+        line-height: 40px;
+    }
+    .subscribe form input[type="submit"] {
+        padding: 0 20px;
+        float: right;
+    }
+}

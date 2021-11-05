@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monthly Leaves</title>
+    <link rel="stylesheet" href="css/style_common.css">
+    <link rel="stylesheet" href="css/style_cart.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4e1d5a9df3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+    <!--header-->
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="join.html"><span>JOIN</span></a></li>
+                    <li><a href="shop.html"><span>SHOP</span></a></li>
+                    <li><a href="about.html"><span>ABOUT</span></a></li>
+                    <li><a href="blog.html"><span>BLOG</span></a></li>
+                    <li><a href="cart.html" class="active"><span>CART</span></a></li>
+                    <li><button type="submit"><span><i class="fas fa-search"></i></span></button></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="gnbMo">
+            <label for="toggle"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="toggle">
+            <ul id="navMo">
+                <li><a href="join.html">JOIN</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="cart.html">CART</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <div class="innerBox">
+                <form action="" method="post">
+                    <input type="text" title="search" placeholder=" search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <button id="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+    <!--go to top-->
+    <button class="go_to_top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!--//go to top-->
+    <!--checkout-->
+    <section class="checkout" id="main">
+        <div class="inner">
+            <!--left side-->
+            <div class="cart">
+                <p class="img"><img src="img/product_1.jpg" alt="image"></p>
+                <h2>Order Summary</h2>
+                <p class="text">
+                    <span class="price">$10.00</span>
+                    Monthly Leaves Membership <br>
+                    <span>Month To Month Plan</span> <br>
+                    1 delivery, auto-renewing <br>
+                    Tea Type Option : Original Tea Box  
+                </p>
+                <p class="shipping">Estimated Shipping Fee <span>$5.00</span></p>
+                <p class="total">Total <span>$15.00 USD</span></p>
+                <form action="">
+                    <input type="text" placeholder="Coupon or Gift Code"> <br>
+                    <button class="hover_effect"><span>APPLY</span></button>
+                </form>
+            </div>
+            <!--right side-->
+            <div class="form">
+                <form action="">
+                    <fieldset>
+                        <legend>Create Account</legend>
+                        <input type="email" id="user_id" placeholder="Email Address">
+                        <input type="password" id="user_pw" placeholder="Password">
+                        <br>
+                        <label for="mailing">
+                            <input type="checkbox" name="mailing" value="mailing" id="mailing">
+                            Sign me up for news emails and awesome promotions
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Shipping Address</legend>
+                        <input type="text" id="user_f_name" placeholder="First Name">
+                        <input type="text" id="user_l_name" placeholder="Last Name">
+                        <input type="text" id="user_company" placeholder="Company Name (optional)">
+                        <input type="text" id="address_street" placeholder="Street Address">
+                        <input type="text" id="address_apt" placeholder="Apt/Unit">
+                        <input type="text" id="address_city" placeholder="City">
+                        <select name="state/province" id="address_province">
+                            <option value="" selected>Select a state/province</option>
+                            <option value="Jeju">Jeju</option>
+                            <option value="Seoul">Seoul</option>
+                        </select>
+                        <input type="text" id="postal" placeholder="Postal Code">
+                        <br><br>
+                        <label for="country">Select Country</label> <br>
+                        <select name="country" id="country">
+                            <option value="" selected>Select Country</option>
+                            <option value="Republic of Korea">Republic of Korea</option>
+                            <option value="United States">United States</option>
+                        </select>
+                        <input type="tel" id="user_tel" placeholder="Phone Number"> <br>
+                        <label for="gift">
+                            <input type="checkbox" name="gift" value="gift" id="gift">
+                            This is a gift (Wrapping Service)
+                            <i class="fas fa-gift"></i>
+                        </label>
+                    </fieldset>
+                    <fieldset class="cc">
+                        <legend>Billing Information</legend>
+                        <p>Plans automatically renew. You can cancel anytime.</p>
+                        <input type="text" id="credit_card" placeholder="Credit Card Number">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-jcb"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-diners-club"></i>
+                        <i class="fab fa-cc-discover"></i> <br>
+                        <input type="text" id="cvc" placeholder="CVC">
+                        <select name="month" id="month">
+                            <option value="01" selected>01 - Jan</option>
+                            <option value="02">02 - Feb</option>
+                            <option value="03">03 - Mar</option>
+                            <option value="04">04 - Apr</option>
+                            <option value="05">05 - May</option>
+                            <option value="06">06 - Jun</option>
+                            <option value="07">07 - Jul</option>
+                            <option value="08">08 - Aug</option>
+                            <option value="09">09 - Sep</option>
+                            <option value="10">10 - Oct</option>
+                            <option value="11">11 - Nov</option>
+                            <option value="12">12 - Dec</option>
+                        </select>
+                        <select name="year" id="year">
+                            <option value="2019" selected>2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select> <br>
+                        <input type="text" id="cc_postal" placeholder="Postal Code">
+                        <select name="state/province" id="cc_state">
+                            <option value="" selected>Select a state/province</option>
+                            <option value="Jeju">Jeju</option>
+                            <option value="Seoul">Seoul</option>
+                        </select>
+                    </fieldset>
+                    <button class="hover_effect"><span>CHECKOUT</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--//checkout-->
+    <!--footer-->
+    <footer>
+        <div class="inner">
+            <h2 class="invisible">footer</h2>
+            <ul>
+                <li>
+                    <a href="https://forms.gle/2VdMqHp2vH2eYksM8" target="_blank" class="hover_effect"><span>WRITE REVIEW HERE</span></a>
+                    <p><a href="#" class="border">Terms &amp; Conditions</a>  <a href="#">Privacy Policy</a></p>
+                    <p>&copy; 2019 All Rights Reserved.</p>
+                </li>
+                <li>
+                    <h3>ADDRESS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, pariatur dolores nobis? Corrupti maiores, corporis.</p>
+                </li>
+                <li>
+                    <h3>CONTACT US</h3>
+                    <p>Call or Text : 123-456-7890 <br> <a href="mailto:example@example.com">example@example.com</a></p>
+                    <p class="sns_logo">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--//footer-->
+    <!--//footer-->
+    <!--javascript-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <!--//javascript-->
+</div>
+</body>
+</html>

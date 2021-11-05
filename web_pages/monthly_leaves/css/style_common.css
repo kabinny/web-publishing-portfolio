@@ -1,0 +1,518 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Philosopher&display=swap');
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Philosopher', sans-serif;
+*/
+
+/*reset*/
+* {margin: 0;padding: 0;}
+a {color: inherit;text-decoration: none;}
+li {list-style: none;}
+h1, h2, h3 {margin: 0; padding: 0;}
+input {margin: 0;padding: 0;}
+input[type=submit] {-webkit-appearance:none;} /*ios기본 버튼 스타일 제거*/
+
+
+/*layout*/
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    position: relative;
+}
+.wrap {
+    position: relative;
+    width: 100%;
+}
+.inner {
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.invisible {
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+.invisible:after {
+    background: none;
+    width: 0;
+    height: 0;
+}
+br.mo {
+    display: none;
+}
+
+/*h2 공통 스타일 기본색 갈색*/
+h2 {
+    font-size: 3em;
+    color: rgb(88,25,16);
+    font-family: 'Philosopher', sans-serif;
+    margin: 0px auto 80px;
+    text-align: center;
+    position: relative;
+}
+h2:after {
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../img/line_brown.png);
+    background-repeat: no-repeat;
+    background-size: 260px 48px;
+    background-position: center;
+    width: 260px;
+    height: 48px;
+}
+/*//h2 공통 스타일*/
+
+/*hover effect*/
+.hover_effect,
+.hover_effect>span {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+.hover_effect:before,
+.hover_effect:after,
+.hover_effect>span:before,
+.hover_effect>span:after {
+    content: '';
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.hover_effect {
+    display: inline-block;
+    overflow: hidden;
+}
+.hover_effect:before,
+.hover_effect:after {
+    right: 0;
+    bottom: 0;
+    background: #fff;
+}
+.hover_effect:before {
+    width: 100%;
+    height: 2px;
+    transform: translateX(-100%);
+}
+.hover_effect:after {
+    width: 2px;
+    height: 100%;
+    transform: translateY(100%);
+}
+.hover_effect>span {
+    display: block;
+    padding: 12px 50px;
+}
+.hover_effect>span:before,
+.hover_effect>span:after {
+    left: 0;
+    top: 0;
+    background: #fff;
+}
+.hover_effect>span:before {
+    width: 100%;
+    height: 2px;
+    transform: translateX(100%);
+}
+.hover_effect>span:after {
+    width: 2px;
+    height: 100%;
+    transform: translateY(-100%);
+}
+.hover_effect:hover:before,
+.hover_effect:hover:after,
+.hover_effect:hover>span:before,
+.hover_effect:hover>span:after {
+    transform: translate(0,0);
+    transition: all 0.5s;
+}
+
+/*header*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(88,25,16,0.8);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    font-family: 'Philosopher', sans-serif;
+}
+header .logo a {
+    float: left;
+    display: block;
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+header .logo img {
+    height: 100%;
+}
+header .gnb {
+    float: right;
+}
+header .gnb ul li {
+    float: left;
+    margin-left: 50px;
+    line-height: 100px;
+}
+header .gnb ul li:first-child {
+    margin-left: 0;
+}
+header .gnb ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.4s;
+    letter-spacing: 1px;
+    line-height: inherit;
+}
+header .gnb ul li button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    line-height: inherit;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+header .gnb ul li a.active {
+    color: rgb(131,199,217);
+}
+header .gnb ul li a:hover span,
+header .gnb ul li a:focus span,
+header .gnb ul li button:hover span,
+header .gnb ul li button:focus span {
+    color: #fec1d6;
+    border-bottom: 2px solid #fec1d6;
+}
+
+/*mobile menu toggle button*/
+header .gnbMo {
+    float: right;
+    color: #fff;
+    display: none;
+    font-size: 2.2em;
+}
+#navMo li {
+    display: block;
+    margin-top: 2px;
+    background: rgba(88,25,16,0.8);
+    width: 100%;
+}
+#navMo li a {
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 0 20px;
+    display: inline-block;
+}
+header label[for="toggle"] {
+    position: absolute;
+    right: 17px;
+    top: 0;
+}
+#toggle {
+    text-indent: -9999px;
+    display: none;
+}
+header #navMo {
+    display: none;
+    line-height: 50px;
+    padding: 0 10px;
+}
+#toggle:checked + #navMo { 
+    display: block;
+}
+/*//mobile menu toggle button*/
+
+/*search*/
+header .search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(88,25,16,0.3);
+    display: none;
+}
+header .search .innerBox {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+/*    background: rgba(88,25,16,0.8);*/
+    background: rgba(53,10,4,0.8);
+    border-top: 3px solid rgba(255,255,255,0.5);
+    border-right: 3px solid rgba(156,63,50,0.5);
+    border-left: 3px solid rgba(156,63,50,0.3);
+    border-bottom: 3px solid rgba(88,25,16,0.9);
+}
+header .search .innerBox form {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+header .search .innerBox input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-size: 3em;
+    color: #fff;
+    width: 70%;
+/*    text-align: center;*/
+}
+header .search .innerBox input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+header .search .innerBox button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+header .search .innerBox button[type:submit] {
+    margin: 20px;
+}
+header .search .innerBox #close-btn {
+    position: absolute;
+    margin: 20px;
+    top: 0;
+    right: 0;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    background: #333;
+    position: relative;
+}
+footer ul {
+    width: 100%;
+    overflow: hidden;
+    margin: 40px 0;
+}
+footer ul li {
+    float: left;
+    width: 27%;
+    margin-right: 9.5%;
+    color: #fff;
+    text-align: center;
+}
+footer ul li:last-child {
+    margin-right: 0;
+}
+footer ul li a.hover_effect {
+    background: #f2807d;
+    transition: all 0.5s;
+    margin-bottom: 80px;
+}
+footer ul li a.hover_effect:hover {
+    background: rgba(0,0,0,0);
+    transition: all 0.5s;
+}
+footer ul li:nth-child(1) .border {
+    border-right: 1px solid #fff;
+    padding-right: 5px;
+}
+footer ul li p {
+    line-height: 1.7;
+}
+footer ul li h3 {
+    font-size: 1.5em;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+footer ul li p.sns_logo a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 8px;
+    transition: all 0.5s;
+    box-sizing: border-box;
+}
+footer ul li p.sns_logo a:last-child {
+    margin-right: 0;
+}
+footer ul li p.sns_logo a i {
+    font-size: 1.9em;
+    line-height: inherit;
+}
+footer ul li p.sns_logo a:nth-child(1) i {
+    color: #1e77f0;
+}
+footer ul li p.sns_logo a:nth-child(2) i {
+    color: #55acee;
+}
+footer ul li p.sns_logo a:nth-child(3) i {
+    color: #cb2027;
+}
+footer ul li p.sns_logo a:nth-child(4) i {
+    color: rgb(88,25,16);
+}
+footer ul li p.sns_logo a:hover {
+    background: rgba(0,0,0,0);
+    border: 1px solid #fff;
+    transition: all 0.5s;
+}
+footer ul li p.sns_logo a:hover i {
+    color: #fff;
+}
+
+/*go to top*/
+.go_to_top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    z-index: 5000;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.05), 0 5px 5px 0 rgba(0,0,0,0.05);
+}
+.go_to_top i {
+    line-height: 40px;
+    font-size: 22px;
+}
+
+/*responsive*/
+@media screen and (max-width:1599px) {
+    .inner {
+        width: 80%;
+    }
+}
+@media screen and (max-width:1024px) {
+    .inner {
+        width: 86%;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    .hover_effect>span {
+        padding: 10px 40px;
+    }
+    header {
+        height: 80px;
+        line-height: 80px;
+    }
+    header .logo a {
+        height: 80px;
+        padding: 10px;
+    }
+    header .gnb ul li {
+        margin-left: 30px;
+        line-height: 80px;
+    }
+    footer ul li a.hover_effect span {
+        padding: 12px 30px;
+    }
+    footer ul li:nth-child(1) .border {
+        border-right: none;
+    }
+    footer ul li:nth-child(1) .border:after {/*line break*/
+        content: '\A';
+        white-space: pre;
+    }
+    footer ul li p.sns_logo a {
+        width: 46px;
+        height: 46px;
+        margin-right: 5px;
+    }
+    footer ul li p.sns_logo a i {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header .gnb ul li {
+        margin-left: 22px;
+    }
+    header .search .innerBox input {
+        font-size: 2.5em;
+        width: 80%;
+    }
+    header .search .innerBox button {
+        font-size: 2em;
+    }
+    footer ul li {
+        width: 50%;
+        margin-right: 0;
+    }
+    footer ul li:nth-child(2) {
+        display: none;
+    }
+    footer ul li a.hover_effect {
+        margin-bottom: 68px;
+    }
+}
+
+@media screen and (max-width:414px) {
+    body {
+        font-size: 14px;
+    }
+    .inner {
+        width: 90%;
+    }
+    br.mo {
+        display: block;
+    }
+    section {
+        width: 100%;
+    }
+    h2:after {
+        background-size: 220px 40px;
+        width: 220px;
+        height: 40px;
+    }
+    header .logo a {
+        padding: 15px 0;
+    }
+    nav.gnb {
+        display: none;
+    }
+    header .gnbMo {
+        display: inline-block;
+    }
+    footer ul li {
+        float: none;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    footer ul li a.hover_effect {
+        margin-bottom: 20px;
+    }
+    footer ul li h3 {
+        margin-bottom: 20px;
+    }
+}

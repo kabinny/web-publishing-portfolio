@@ -1,0 +1,272 @@
+/*section main*/
+section.main {
+    width: 100%;
+    background-image: linear-gradient(to right, #d7d7d7 50%, #cecece 50%)
+}
+section.main h2 {
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+section.main .img {
+    width: inherit;
+}
+section.main .img img {
+    width: 100%;
+}
+
+/*section new*/
+section.new {
+    width: 100%;
+    overflow: hidden;
+}
+section.new h2 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 123px 0 40px 0;
+}
+section.new ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 124px;
+}
+section.new ul li {
+    overflow: hidden;
+    width: 45%;
+    height: 440px;
+}
+section.new ul li .text {
+    height: 440px;
+    position: absolute;
+    box-sizing: border-box;
+}
+section.new ul li .text p.small {
+    font-size: 12px;
+    margin-bottom: 25px;
+    margin-top: 62px;
+}
+section.new ul li .text h3 {
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 42px;
+}
+section.new ul li .img {
+    float: right;
+    width: 70%;
+}
+section.new ul li .img img {
+    height: 100%;
+}
+section.new ul li .text .btn {
+    border: 1px solid #aaaaaa;
+    padding: 9px 14px;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s;
+}
+section.new ul li .text .btn:hover {
+    background: #000;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+/*section exhibition*/
+section.exhibition {
+    background: #f2f2f2;
+    width: 100%;
+    overflow: hidden;
+}
+section.exhibition .center {
+    position: relative;
+    float: right;
+    left: -50%;
+}
+section.exhibition .center div {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+section.exhibition .text {
+    margin-right: 100px;
+}
+section.exhibition .text h2 {
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 27px;
+}
+section.exhibition .text p {
+    font-size: 12px;
+    margin-bottom: 110px;
+}
+section.exhibition .text .btn {
+    padding: 14px 20px;
+    background: #000;
+    color: #fff;
+    transition: all 0.3s;
+}
+section.exhibition .text .btn:hover {
+    background: #888;
+    transition: all 0.3s;
+}
+section.exhibition .text .btn .img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 9px 11px 14px;
+}
+
+/*section experience*/
+section.experience {
+    width: 100%;
+    overflow: hidden;
+}
+section.experience h2 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 123px 0 40px 0;
+}
+section.experience ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 124px;
+}
+section.experience ul li {
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    height: 360px;
+}
+section.experience ul li .text {
+    height: inherit;
+    position: absolute;
+    box-sizing: border-box;
+}
+section.experience ul li .text p.small {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 41px;
+}
+section.experience ul li .text p {
+    font-size: 12px;
+}
+section.experience ul li .text h3 {
+    font-size: 35px;
+    margin-bottom: 72px;
+}
+section.experience ul li .img {
+    float: right;
+}
+section.experience ul li .text .btn {
+    border: 1px solid #aaaaaa;
+    padding: 9px 14px;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s;
+}
+section.experience ul li .text .btn:hover {
+    background: #000;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+/*section service*/
+section.service {
+    width: 100%;
+    overflow: hidden;
+}
+section.service h2 {
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+section.service ul {
+    position: relative;
+    float: right;
+    left: -50%;
+    margin-bottom: 111px;
+}
+section.service ul li {
+    position: relative;
+    float: left;
+    left: 50%;
+}
+section.service ul li:nth-child(1) {
+    background: url(../img/ico-paper.png) 31px no-repeat;
+}
+section.service ul li:nth-child(2) {
+    background: url(../img/ico-share.png) 31px no-repeat;
+}
+section.service ul li:nth-child(3) {
+    background: url(../img/ico-layers.png) 31px no-repeat;
+}
+section.service ul li a {
+    display: inline-block;
+    padding-left: 80px;
+    padding-right: 60px;
+    border-right: 1px solid #000;
+}
+section.service ul li:last-child a {
+    border-right: none;
+}
+section.service ul li a strong {
+    display: block;
+}
+
+/*section SNS*/
+section.sns {
+    width: 100%;
+    overflow: hidden;
+}
+section.sns h2 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+/*    margin-left:390px;*/
+    float: left;
+}
+section.sns a.link {
+    display: block;
+    float: right;
+    padding-left: 30px;
+/*    margin-right: 390px;*/
+    background: url(../img/ico-insta-blk.png) no-repeat;
+}
+section.sns ul {
+    position: relative;
+    float: right;
+    left: -50%;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+section.sns ul li {
+    position: relative;
+    float: left;
+    left: 50%;
+    margin-right: 12px;
+}
+section.sns ul li:last-child {
+    margin-right: 0;
+}
+section.sns ul li a {
+    display: block;
+    width: 132px;
+    height: 132px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+section.sns ul li a:hover img {
+    transform: scale(1.2);
+    transition: all 0.8s;
+}
+section.sns ul li a img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s;
+}

@@ -1,0 +1,219 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Orbitron|PT+Sans');
+
+/*reset*/
+* {margin: 0;padding: 0;}
+li {list-style: none;}
+a{text-decoration: none;color: inherit;}
+h1{margin: 0;}
+
+/*layout*/
+body {
+    background: url(../img/bg.png)no-repeat center/cover;
+    font-family: 'PT sans', sans-serif;
+    color: #888;
+    font-size: 16px;
+}
+.wrap {
+    width: 980px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 10px 0 40px rgba(0,0,0,0.2), 
+                            -10px 0 40px rgba(0,0,0,0.2);
+}
+
+/*header*/
+.innerHeader {
+    width: 100%;
+    height: 80px;
+    background: #181818;
+}
+.innerHeader h1.logo {
+    float: left;
+    font-size: 28px;
+    line-height: 80px;
+    padding-left: 20px;
+    color: #2dc0c4;
+    font-family: 'Orbitron', sans-serif;
+}
+.innerHeader .gnb {
+    float: right;
+}
+.innerHeader .gnb ul {
+    overflow: hidden;
+}
+.innerHeader .gnb ul li {
+    float: left;
+}
+.innerHeader .gnb ul li a {
+    display: block;
+    line-height: 80px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #888;
+    transition: all 0.3s;
+}
+.innerHeader .gnb ul li a:hover,
+.innerHeader .gnb ul li a:focus {
+    background: #2dc0c4;
+    color: #115550;
+}
+
+/*section main*/
+.main {
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: 860px;
+    overflow: hidden;
+    background: url(../img/main.jpg)no-repeat center -150px/cover;
+} 
+.main .mainTitle {
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 80px 50px;
+    color: #fff;
+}
+.main .mainTitle h2 {
+    font-size: 40px;
+}
+.main .mainTitle p {
+    font-size: 18px;
+    padding: 30px 100px;
+    line-height: 1.8;
+}
+.main .mainTitle a.btnStart {
+    display: inline-block;
+    width: 200px;
+    font-size: 18px;
+    background: #2dc0c4;
+    line-height: 2.4;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.main .mainTitle a.btnStart .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.3s;
+}
+.main .mainTitle a.btnStart .text {
+    position: relative;
+}
+.main .mainTitle a.btnStart:hover .mask,
+.main .mainTitle a.btnStart:focus .mask {
+    width: 100%;
+    background: #ff287b;
+}
+
+/*about*/
+.about {
+    height: 250px;
+    padding: 50px 0;
+    background-color: #eee;
+}
+.about h2 {
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+.about article {
+    float: left;
+    width: 245px;
+    text-align: center;
+    background: url(../img/graduate.png) no-repeat center top /40px auto;
+}
+.about article:nth-child(3) {
+    background-image: url(../img/star.png);
+}
+.about article:nth-child(4) {
+    background-image: url(../img/layers.png);
+}
+.about article:nth-child(5) {
+    background-image: url(../img/layout.png);
+}
+.about h3 {
+    margin: 60px 0 20px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000;
+}
+.about p,
+.about ul {
+    line-height: 1.7;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.about ul li {
+    position: relative;
+}
+.about ul li:before {
+    content: '\f058';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /*solid style*/
+    color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    font-size: 17px;
+}
+.about ul li:hover:before {
+    color: #000;
+}
+
+/*section gallery*/
+.gallery {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    padding: 50px 0;
+}
+.gallery h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.gallery .text {
+    font-size: 16px;
+    color: #888;
+}
+.gallery ul {
+    overflow: hidden;
+    padding: 50px 30px 20px;
+}
+.gallery ul li {
+    float: left;
+    width: 31%;
+    height: 380px;
+    margin-right: 3.5%;
+    box-sizing: border-box;
+}
+.gallery ul li:hover {
+    border: 6px solid #2dc0c4;
+}
+.gallery ul li:nth-child(3n) {
+    margin-right: 0;
+}
+.gallery ul li p.img img {
+    width: 100%;
+    height: 290px;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    text-align: center;
+    font-size: 14px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}

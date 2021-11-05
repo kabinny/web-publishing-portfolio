@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1.0">
+    <title>KABIN Portfolio</title>
+    <link rel="stylesheet" href="css/style_common.css">
+    <link rel="stylesheet" href="css/style_sub.css">
+    <link rel="stylesheet" href="css/style_project_3.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="wrap">
+    <!--header-->
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="index.html">KIM KABIN</a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li>
+                        <a href="index.html#gallery">Gallery</a>
+                        <button class="mobile"></button>
+                        <ul class="submenu">
+                            <li><a href="project_1.html">Monthly Leaves</a></li>
+                            <li><a href="project_2.html">Portfolio Website</a></li>
+                            <li><a href="project_3.html">Samwon Paper</a></li>
+                            <li><a href="project_4.html">Corner Books</a></li>
+                            <li><a href="index.html#web_page">Web Page</a></li>
+                            <li><a href="index.html#graphic">Graphic Design</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!--mobile menu-->
+            <button class="open">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="gnb_mo">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li>
+                        <a href="index.html#gallery">Gallery</a>
+                        <button class="mobile"></button>
+                        <ul class="submenu">
+                            <li><a href="project_1.html">Monthly Leaves</a></li>
+                            <li><a href="project_2.html">Portfolio Website</a></li>
+                            <li><a href="project_3.html">Samwon Paper</a></li>
+                            <li><a href="project_4.html">Corner Books</a></li>
+                            <li><a href="index.html#web_page">Web Page</a></li>
+                            <li><a href="index.html#graphic">Graphic Design</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!--//mobile menu-->
+        </div>
+        <div class="progress-bar" id="myBar"></div>
+    </header>
+    <!--//header-->
+    <!--go back-->
+    <button class="go_back" onclick="history.back(-1);">
+        <span class="arrow_back"></span>
+    </button>
+    <!--//go back-->
+    <!--go to top-->
+    <button class="go_to_top">
+        <span class="arrow_up"></span>
+    </button>
+    <!--//go to top-->
+    <!--main-->
+    <section id="main">
+        <p class="img"><img src="img/mu3.png" alt="mock-up"></p>
+        <div class="link rowAr">
+            <button class="slide pc-main" onclick="window.open('web_pages/samwon_paper/index.html', '', 'width=1920, height=970')">&nbsp; <span class="invisible">메인 페이지</span></button>
+            <button class="slide pc-sub" onclick="window.open('web_pages/samwon_paper/sub.html', '', 'width=1920, height=970')">&nbsp; <span class="invisible">서브 페이지</span></button>
+        </div>
+    </section>
+    <!--//main-->
+    <!--intro-->
+    <section id="intro">
+        <div class="inner">
+            <div class="rowBt">
+                <h2 class="unit ready">Samwon Paper</h2>
+                <p class="unit ready">
+                    다양한 종이를 생산하는 삼원특수지 홈페이지의 메인페이지와 소개페이지를 제작해보았습니다. 고딕계열의 두가지 서체만 사용해서 깔끔한 느낌을 주었습니다. <br>포토샵으로 프로토타입을 만들어보고, 그것을 바탕으로 HTML과 CSS를 이용한 정적인 페이지를 구현해 보았습니다. 
+                </p>
+            </div>
+            <div class="link rowAr">
+                <button class="slide pc-main unit ready" onclick="window.open('web_pages/samwon_paper/index.html', '', 'width=1920, height=970')">&nbsp; <span class="invisible">메인 페이지</span></button>
+                <button class="slide pc-sub unit ready" onclick="window.open('web_pages/samwon_paper/sub.html', '', 'width=1920, height=970')">&nbsp; <span class="invisible">서브 페이지</span></button>
+            </div>
+        </div>  
+    </section>
+    <!--//intro-->
+    <!--workflow-->
+    <section id="workflow">
+        <div class="inner">
+            <h2 class="unit ready">Workflow</h2>
+            <ul class="rowAr">
+                <li class="unit ready">
+                    <p class="img"><img src="img/wireframe.svg" alt="와이어프레임"></p>
+                    <p class="text">자료조사와 구상을 하고, <br>와이어프레임을 작성</p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/style.svg" alt="스타일가이드"></p>
+                    <p class="text">스타일 가이드와<br>스토리보드 제작</p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/prototype.svg" alt="프로토타입"></p>
+                    <p class="text">포토샵을 이용해 <br>프로토타입 제작</p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/html.svg" alt="html"></p>
+                    <p class="text">HTML / CSS로 <br>페이지 제작</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--//workflow-->
+    <!--design-->
+    <section id="design">
+        <div class="inner">
+            <h2 class="unit ready">Wireframe</h2>
+            <p class="text50 unit ready">
+                사이트 분석 <br>1. 종이를 만드는 회사이므로 기본적인 하얀색 바탕에 깔끔한 서체를 사용했습니다. <br>2. 다양한 종이와 제품을 생산하기 때문에 컬러풀한 이미지를 자주 사용했습니다. <br><br>사이트의 정보 구조 <br>비선형적 구조로, 정보가 순차적으로 제공되지 않고 복잡한 네트워크 형식으로 상호 연결되어 사용자가 원하는 페이지로 이동하는 것이 자유로운 구조입니다.
+            </p>
+            <div class="rowAr">
+                <p class="img mediumImg unit ready"><img src="img/sp_1.png" alt="와이어프레임1"></p>
+                <p class="img mediumImg unit ready"><img src="img/sp_2.png" alt="와이어프레임2"></p>
+            </div>
+        </div>
+    </section>
+    <!--//design-->
+    <!--style-->
+    <section id="style">
+        <div class="inner">
+            <h2 class="unit ready">Style Guide</h2>
+            <p class="text50 unit ready">
+                전체적으로 깔끔한 하얀색 바탕에 부분적으로 회색톤 바탕을 사용. 웹사이트 메인 로고는 사이트의 통일감을 주기 위해 기존 CI에서 색을 전부 검정으로 바꾼 것으로 적용했습니다. <br><br>폰트는 깔끔하고 세련된 느낌이 들 수 있게 한글에는 노토산스 폰트, 영문에는 몽세라뜨 폰트를 사용했습니다.
+            </p>
+            <ul class="rowAr">
+                <li class="unit ready">
+                    <p class="img"><img src="img/sp_c_1.svg" alt="#FFFFFF"></p>
+                    <p class="text">#FFFFFF <br>R 255 G 255 B 255</p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/sp_c_2.svg" alt="#F3F4F6"></p>
+                    <p class="text">#F3F4F6 <br>R 243 G 244 B 246</p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/sp_c_3.svg" alt="#D8D8D8"></p>
+                    <p class="text">#D8D8D8 <br>R 216 G 216 B 216</p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/sp_c_4.svg" alt="#221F20"></p>
+                    <p class="text">#221F20 <br>R 34 G 31 B 32</p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/sp_c_5.svg" alt="로고"></p>
+                </li>
+            </ul>
+            <ul class="rowAr font">
+                <li class="unit ready">
+                    <p class="img"><img src="img/sp_f_1.svg" alt="Noto Sans KR"></p>
+                </li>
+                <li class="unit ready">
+                    <p class="img"><img src="img/sp_f_2.svg" alt="Montserrat"></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--//style-->
+    <!--storyboard-->
+    <section id="storyboard">
+        <div class="inner">
+            <h2 class="unit ready">Storyboard</h2>
+            <p class="text50 unit ready">
+                -인덱스 페이지- <br>1)메인 로고(검정색),인덱스 페이지로 연결 <br>2)메인 메뉴 gnb <br>3)메인이미지(배경 색을 맞춰서 넣음) <br>4)새로운 종이 소개하는 섹션. 클릭하면 상세페이지로 이동하는 구조. <br>5)전시회 소개글. 아래쪽에 전시 상세 페이지로 이동하는 버튼 <br>6)전시회 메인 이미지(233x282px) <br>7)다양한 디자인 제품 소개하는 섹션. 오른쪽에 이미지를 넣고 왼쪽에 타이틀, 텍스트, 이동 버튼 <br>8)서비스, 문의, 안내 링크. 텍스트 앞에 아이콘 <br>9)sns 계정 연동이 되어서 최근 사진 8개 보이기. 이미지 각 사이즈 132x132px <br>10)각종 sns 링크가 연결된 로고 <br>11)주소, Copyright, 관계사 링크 로고 <br>12)go to top 버튼
+            </p>
+            <p class="text50 unit ready"><img src="img/sp_3.svg" alt="인덱스 스토리보드"></p>
+            <p class="text50 unit ready">
+                -서브 페이지- <br>1)회사 소개 타이틀 <br>2)메인 이미지(1141x400px) <br>3)회사가 추구하는 가치 <br>4)추구하는 가치의 대표 이미지 (240x240px) <br>5)회사 소개 이미지01 (1141x502px) <br>6)회사 소개 텍스트01. 이미지와 타이틀 부분이 겹침. <br>7)회사 소개 이미지02 (1141x587px) <br>8)회사 소개 텍스트02. 이미지와 타이틀 부분이 겹침.
+            </p>
+            <p class="text50 unit ready"><img src="img/sp_4.svg" alt="서브 스토리보드"></p>
+        </div>
+    </section>
+    <!--//storyboard-->
+    <!--page-->
+    <section id="page">
+        <div class="inner">
+            <h2 class="unit ready">HTML / CSS</h2>
+            <div class="link rowAr">
+                <button class="slide pc-main unit ready" onclick="window.open('web_pages/samwon_paper/index.html', '', 'width=1920, height=970')">&nbsp; <span class="invisible">메인 페이지</span></button>
+                <button class="slide pc-sub unit ready" onclick="window.open('web_pages/samwon_paper/sub.html', '', 'width=1920, height=970')">&nbsp; <span class="invisible">서브 페이지</span></button>
+            </div>
+            <div class="rowAr">
+                <p class="img imgRes unit ready"><img src="img/sp_index.jpg" alt="인덱스 페이지"></p>
+                <p class="img imgRes unit ready"><img src="img/sp_sub.jpg" alt="서브 페이지"></p>
+            </div>
+            <div class="rowBt">
+                <p class="img mockUp unit ready"><img src="img/sp_5.png" alt="목업 이미지"></p>
+                <p class="img mockUp unit ready"><img src="img/sp_6.png" alt="목업 이미지"></p>
+            </div>
+        </div>
+    </section>
+    <!--//page-->
+    <!--next-->
+    <article id="next">
+        <div class="inner">
+            <a class="box unit ready" href="project_4.html">
+                <h2>Next : Corner Books</h2>
+                <p>친근함과 개성이 넘치는 독립서점 브랜드와 BI 구상 및 제작</p>
+            </a>
+        </div>
+    </article>
+    <!--//next-->
+    
+    <!--footer-->
+    <footer>
+        <div class="inner">
+            <span>Copyright 2020. KIM KABIN. All rights reserved.</span>
+            <address><a href="mailto:kabinny@gmail.com" title="메일쓰기">kabinny@gmail.com</a></address>
+        </div>
+    </footer>
+    <!--//footer-->
+    
+    <!--script-->
+    <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sub.js"></script>
+    <!--//script-->
+</div>
+</body>
+</html>

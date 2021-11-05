@@ -1,0 +1,301 @@
+@charset="UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap'); 
+
+/*reset*/
+* {margin: 0;padding: 0;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+
+/*layout*/
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 100px;
+    background: #000;
+}
+.innerHeader .logo {
+    float: left;
+    line-height: 100px;
+    margin-left: 50px;
+}
+.innerHeader .logo a {
+    display: block;
+}
+.innerHeader .gnb {
+    float: right;
+}
+.innerHeader .gnb ul li {
+    float: left;
+    line-height: 100px;
+    margin-right: 50px;
+}
+.innerHeader .gnb ul li a {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+}
+
+/*section main*/
+section.main {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    background: url(../img/aquarium.jpg)no-repeat center/cover;
+}
+section.main .mainTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+}
+section.main .mainTitle p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+section.main .mainTitle h2 {
+    font-size: 40px;
+}
+
+/*section nemo*/
+section.Nemo {
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    padding: 50px;
+    box-sizing: border-box;
+}
+section.Nemo .photo {
+    float: left;
+    width: 450px;
+    height: 320px;
+/*    margin: 50px;*/
+}
+section.Nemo .photo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+section.Nemo .photo a p.img {
+    overflow: hidden;
+}
+section.Nemo .photo a p.img img {
+    width: 100%;
+}
+section.Nemo .text {
+    float: right;
+    width: 50%;
+    color: #fff;
+    box-sizing: border-box;
+}
+section.Nemo .text h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+section.Nemo .text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+section.Nemo .text a.btn {
+    display: inline-block;
+    font-size: 20px;
+    background: #fece1a;
+    font-weight: bold;
+    padding: 15px 28px;
+}
+
+/*section looking*/
+section.looking {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: #fece1a;
+    padding: 55px;
+    box-sizing: border-box;
+}
+section.looking h2 {
+    font-size: 46px;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+section.looking ul {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+section.looking ul li {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+section.looking ul li:last-child {
+    margin-right: 0;
+}
+section.looking ul li a {
+    display: inline-block;
+}
+section.looking ul li a p.img {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+}
+section.looking ul li a p.img img {
+    width: 100%;
+    height: 100%;
+}
+section.looking ul li h3 {
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-weight: bold;
+}
+section.looking ul li p.text {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    height: 90px;
+}
+section.looking ul li a.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    font-size: 22px;
+    background: #000;
+    color: #fff;
+}
+
+/*section aquarium*/
+section.aquarium {
+    width: 100%;
+    overflow: hidden;
+    background: #181a1c;
+}
+section.aquarium ul {
+    box-sizing: border-box;
+    padding: 60px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+section.aquarium ul li {
+    float: left;
+    width: 41%;
+    margin-right: 30px;
+}
+section.aquarium ul li h2 {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 10px;
+}
+section.aquarium ul li p {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.5;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+section.aquarium ul li a.btn {
+    display: block;
+    width: 180px;
+    line-height: 55px;
+    color: #181a1c;
+    text-align: center;
+    font-weight: bold;
+    background: #fece1a;
+}
+section.aquarium ul li p.img {
+    width: 600px;
+    height: 400px;
+}
+section.aquarium ul li p.img img {
+    width: 100%;
+    height: 100%;
+}
+
+/*section extension*/
+section.extension {
+    background: #fece1a;
+    overflow: hidden;
+}
+section.extension .title {
+    width: 100%;
+    padding: 55px 60px 30px 55px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+section.extension .title h2 {
+    font-size: 50px;
+    line-height: 1.7;
+    width: 47%;
+    padding: 5px 0px 10px 5px;
+    border-bottom: 1px solid #000;
+}
+section.extension .title a.btn {
+    float: right;
+    display: block;
+    width: 150px;
+    text-align: center;
+    background: #181a1c;
+    color: #fff;
+    padding: 15px 30px;
+}
+section.extension ul {
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 40px;
+    box-sizing: border-box;
+}
+section.extension ul li {
+    position: relative;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 50px;
+}
+section.extension ul li:nth-child(3) {
+    margin-right: 0px;
+}
+section.extension ul li p.icon {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: auto;
+    background: #181a1c;
+    text-align: center;
+    color: #fff;
+}
+footer p.address {
+    padding: 40px 0 0;
+    letter-spacing: 2px;
+}
+footer p.copy {
+    font-size: 15px;
+    padding: 10px 0 40px;
+}

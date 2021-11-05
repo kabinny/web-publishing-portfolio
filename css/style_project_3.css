@@ -1,0 +1,95 @@
+/*project 3 : Samwon Paper*/
+
+/*main*/
+#main {
+    background-color: #ececec;
+}
+#main p.img {
+    width: 30%;
+}
+#main p.img img {
+    width: 100%;
+}
+
+/*intro link button*/
+#intro .slide, #page .slide {width: 20%;}
+.slide.pc-main:after {content: "메인 페이지"}
+.slide.pc-main:before {content: "Main Page"}
+.slide.pc-sub:after {content: "서브 페이지"}
+.slide.pc-sub:before {content: "Sub Page"}
+
+/*design*/
+#design .rowAr {
+    margin-top: 150px;
+}
+
+
+/*page*/
+#page .link {
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+#page .link button:first-child {animation-duration: 0.2s;}
+#page .imgRes {
+    width: 46%;
+    padding-top: 74%;
+}
+#page .rowBt p.img {
+    margin-top: 140px;
+}
+
+/*next*/
+#next .box:before {
+    background-color: rgba(247, 151, 92, 0.47);
+}
+#next .box:after {
+    width: 45%;
+    height: 120%;
+    background-image: url(../img/mu4.svg);
+    right: 15%;
+    top: -20%;
+}
+#next:hover h2,
+#next:hover p {
+    text-shadow: 2px 2px 2px rgba(247, 151, 92, 0.7);
+} 
+
+
+
+
+/*1024*/
+@media screen and (max-width:1024px) {
+    #next .box:after {height: 98%;}
+    #next h2,
+    #next p {
+        text-shadow: 2px 2px 2px rgba(247, 151, 92, 0.7);
+    } 
+}
+/*768*/
+@media screen and (max-width:768px) {
+    #main p.img {width: 65%;}
+    #intro .slide, #responsive .slide {width: 18%;}
+    #next .box:after {height: 90%;top: 0;}
+}
+/*425*/
+@media screen and (max-width:425px) {
+    #main p.img {width: 80%;}
+    
+    #intro .slide, #page .slide, #main .slide {width: 43%;}
+    .slide.pc-main:after {content: "메인 (PC사이즈)"}
+    .slide.pc-sub:after {content: "서브 (PC사이즈)"}
+    
+    #design .rowAr {display: block;}
+    
+    #page .rowAr:nth-child(3) {display: block;}
+    #page .rowAr p.img {width: 99%;margin-bottom: 50px;}
+    #page .imgRes {width: 99%;padding-top: 158%;}
+    
+    #page .rowBt {display: block;}
+    #page .rowBt p.img {margin-top: 50px;}
+    
+    #next .box:after {
+        width: 65%;
+        right: 5%;
+    }
+}

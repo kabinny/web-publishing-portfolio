@@ -1,0 +1,91 @@
+/*project 4 : Corner Books*/
+
+/*main*/
+#main {
+    background-color: #fceae2;
+}
+#main p.img {
+    width: 35%;
+    margin-bottom: 200px;
+}    
+#main p.img img {
+    width: 100%;
+}
+
+/*sketch*/
+#sketch .rowAr {
+    margin-top: 150px;
+}
+
+
+/*style*/
+#style .sample:after{content: '';display: block;clear: both;}
+#style .sample {margin: 140px 15% 0;}
+#style .sample li:nth-child(1) {width: 65%;float: left;margin-bottom: 100px;}
+#style .sample li:nth-child(2) {width: 20%;float: right;}
+#style .sample li:nth-child(3) {width: 30%;float: left;padding: 30px;border: 1px solid var(--orange);}
+#style .sample li:nth-child(4) {float: left;margin-left: 8%;}
+
+
+/*symbol*/
+#symbol span {font-weight: bold;font-size: 1.1em;}
+#symbol p.img {padding: 0 10%;}
+
+/*flexible*/
+#flexible li {height: 320px;}
+#flexible li img {height: 100%;}
+#flexible ul {margin-bottom: 140px;}
+#flexible .rowAr li:nth-child(1) {animation-duration: 0.1s;}
+#flexible .rowAr li:nth-child(2) {animation-duration: 0.3s;}
+
+/*next*/
+#next .box:before {
+    background-color: rgba(236, 132, 86, 0.47);
+}
+#next .box:after {
+    width: 40%;
+    height: 100%;
+    background-image: url(../img/mu1.png);
+    right: 20%;
+    top: 20%;
+}
+#next:hover h2,
+#next:hover p {
+    text-shadow: 2px 2px 2px rgba(236, 132, 86, 0.7);
+} 
+
+
+/*1024*/
+@media screen and (max-width:1024px) {
+    #next .box:after {width: 50%;}
+    #next h2,
+    #next p {
+        text-shadow: 2px 2px 2px rgba(236, 132, 86, 0.7);
+    } 
+}
+/*768*/
+@media screen and (max-width:768px) {
+    #main p.img {width: 65%;}
+    #flexible li {height: 250px;}
+    #next .box:after {width: 52%;right: 15%;}
+}
+/*425*/
+@media screen and (max-width:425px) {
+    #main p.img {width: 80%;}
+    
+    #sketch .rowAr {display: block;}
+    
+    #symbol p.img {padding: 0;}
+    #style .sample {margin: 50px 0 0 0;}
+    
+    #flexible .rowAr {flex-direction: column;align-items: center;}
+    #flexible .rowAr li {width: 50%;height: auto;margin-bottom: 50px;}
+    #flexible ul {margin-bottom: 0;}
+    #flexible .rowBt {display: block;}
+    #flexible .rowBt p.img {margin-bottom: 50px;}
+    
+    #next .box:after {
+        width: 65%;
+        right: 5%;
+    }
+}
